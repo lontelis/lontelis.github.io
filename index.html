@@ -174,26 +174,9 @@
         }
         
         .references {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        
-        .reference-item {
-            padding: 15px;
-            border: 1px solid var(--border);
-            border-radius: 5px;
-            background: var(--light);
-        }
-        
-        .reference-name {
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        
-        .reference-position {
+            text-align: center;
+            padding: 20px;
             font-style: italic;
-            margin-bottom: 10px;
             color: var(--secondary);
         }
         
@@ -214,10 +197,6 @@
             
             .header-right {
                 margin-top: 20px;
-            }
-            
-            .references {
-                grid-template-columns: 1fr;
             }
         }
         
@@ -259,6 +238,12 @@
         .youtube-channel i {
             color: #ff0000;
             font-size: 1.5rem;
+        }
+        
+        .conference-type {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-left: 5px;
         }
     </style>
 </head>
@@ -427,56 +412,150 @@
             </div>
         </section>
 
+        <section id="teaching">
+            <h3>Teaching & Academic Services</h3>
+            <div class="section-content">
+                <div class="timeline-item">
+                    <div class="timeline-date">2025</div>
+                    <div class="timeline-title"><a href="https://www.cpt.univ-mrs.fr/%3flang=en">CPT at AMU, Marseille</a></div>
+                    <div class="timeline-details">Advanced Math methods in cosmology (1h)</div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2025</div>
+                    <div class="timeline-title"><a href="https://www.canterbury.ac.nz/study/academic-study/science/science-schools-and-departments/school-of-physical-and-chemical-sciences">Auckland Univ., New Zealand</a></div>
+                    <div class="timeline-details"><a href="https://www2.phys.canterbury.ac.nz/~dlw24/">Advanced Math methods in cosmology</a> (1h)</div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2025</div>
+                    <div class="timeline-title"><a href="https://www.cppm.in2p3.fr/renoir/">CPPM, France</a></div>
+                    <div class="timeline-details">Advanced Math methods in cosmology (1h)</div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2025</div>
+                    <div class="timeline-title"><a href="https://newuu.uz/en/graduate-program/msc-in-modern-physics-">New U.U., Uzbekinstan</a></div>
+                    <div class="timeline-details">Advanced Math methods in cosmology (1h)</div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2025</div>
+                    <div class="timeline-title"><a href="https://www.ssmeridionale.it/en/school-data/">SSM, Napoli</a></div>
+                    <div class="timeline-details"><a href="https://cosmoversetensions.eu/grant-calls/short-term-scientific-missions/">STSM: Tensions and Non-Local Analytical Dynamics</a> (1w)</div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2024</div>
+                    <div class="timeline-title"><a href="https://www.um.edu.mt/issa/">ISSA, Malta Univ.</a></div>
+                    <div class="timeline-details"><a href="https://cosmoversetensions.eu/grant-calls/short-term-scientific-missions/">STSM: (Non-)Riemannian Cosmic Tensions</a> (1w)</div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2024</div>
+                    <div class="timeline-title"><a href="https://events.perimeterinstitute.ca/event/74/overview">Perimeter Institute</a></div>
+                    <div class="timeline-details"><a href="https://events.perimeterinstitute.ca/event/74/overview">Celestial Holography Summerschool participant</a> (1w)</div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2024</div>
+                    <div class="timeline-title"><a href="https://cosmologyfromhome.com/">Cosmo From Home</a></div>
+                    <div class="timeline-details">Session host in <a href="https://docs.google.com/presentation/d/1PYi8-QTDGvsI1IEQBmZlkmyP1JQY943eW0gRSSZ53sE/edit?usp=sharing">Dynamical System in Cosmology</a> (1h)</div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2023</div>
+                    <div class="timeline-title"><a href="https://www.benasque.org/2023uco/cgi-bin/talks/allprint.pl">UCO, Benasque</a></div>
+                    <div class="timeline-details">Host in <a href="https://docs.google.com/presentation/d/1GeA0shXkkWzXuKMCYpQd3vlPqED6HQzq5QDEC4Jja78/edit?usp=sharing">Modifications of Gravity</a> and <a href="https://docs.google.com/presentation/d/1eBMjI4EwgY2oCmlVDCDPQQ1bzCq3GM89-yxZlckcv7c/edit?usp=sharing">Higher-order stats</a> (5h)</div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2023</div>
+                    <div class="timeline-title"><a href="https://cosmologyfromhome.com/">Cosmo From Home</a></div>
+                    <div class="timeline-details">Session host in Homogeneity, Simulations and LSS (5h)</div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2022-</div>
+                    <div class="timeline-title"><a href="http://www.ibsofprovence.com/en/">IBS of Provence</a></div>
+                    <div class="timeline-details"><a href="https://github.com/lontelis/Presentations">Mathematics and Physics for High School Students</a> (6×4 h Seminars, 2.5y)</div>
+                </div>
+                
+                <!-- Additional teaching items would continue here -->
+            </div>
+        </section>
+
+        <section id="conferences">
+            <h3>Conferences: Talks/Posters</h3>
+            <div class="section-content">
+                <div class="timeline-item">
+                    <div class="timeline-date">2025</div>
+                    <div class="timeline-title"><a href="https://indico.global/event/551/">The Dark Side of the Universe</a></div>
+                    <div class="timeline-details"><a href="https://indico.global/event/551/contributions/126198/">FAT dynamics to cosmology</a> <span class="conference-type">(25' Talk)</span></div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2025</div>
+                    <div class="timeline-title"><a href="https://cosmologyfromhome.com/">Cosmo From Home</a></div>
+                    <div class="timeline-details"><a href="https://www.youtube.com/watch?v=fC8KGPR8aho">Advanced math in cosmology</a> <span class="conference-type">(25' Talk)</span></div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2024</div>
+                    <div class="timeline-title"><a href="https://events.perimeterinstitute.ca/event/66/overview">50 yr of Horndeski at PI</a></div>
+                    <div class="timeline-details"><a href="https://www.youtube.com/watch?v=D_jhDLuTM9I">A probabilistic expanding universe under FA</a> <span class="conference-type">(Poster)</span></div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2024</div>
+                    <div class="timeline-title"><a href="https://cosmologyfromhome.com/">Cosmo From Home</a></div>
+                    <div class="timeline-details"><a href="https://www.youtube.com/watch?v=pghvQLYcWPA">A probabilistic expanding universe under FA</a> <span class="conference-type">(25' talk)</span></div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2023</div>
+                    <div class="timeline-title"><a href="https://indico.physics.auth.gr/event/15/contributions/366/">NEB</a></div>
+                    <div class="timeline-details"><a href="https://github.com/lontelis/Presentations/blob/main/FunctorsOfActionsTowards_NEB_Greece_online_PNTELIS.pdf">New avenues of functors of actions theories</a> <span class="conference-type">(20' Talk)</span></div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2023</div>
+                    <div class="timeline-title"><a href="https://cosmologyfromhome.com/">Cosmo From Home</a></div>
+                    <div class="timeline-details"><a href="https://www.youtube.com/watch?v=3NAGCVJklBU&t=2s">New avenues on Functors of Actions</a> <span class="conference-type">(25' talk)</span></div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2023</div>
+                    <div class="timeline-title"><a href="http://het.physics.ntua.gr/Seminars/230524.Ntelis.pdf">NTUA HET</a></div>
+                    <div class="timeline-details">New theories in cosmology and particle physics <span class="conference-type">(1h Seminar)</span></div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2022</div>
+                    <div class="timeline-title"><a href="https://theory.cern/">CERN TH DPT Visit</a></div>
+                    <div class="timeline-details">Functors of Actions <span class="conference-type">(5' Blackboard Talk)</span></div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2021</div>
+                    <div class="timeline-title"><a href="https://www.euclid-ec.org/">Euclid</a></div>
+                    <div class="timeline-details">Science talk: Overview of impact of interlopers on PNG <span class="conference-type">(1h Talk)</span></div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2020</div>
+                    <div class="timeline-title"><a href="https://indico.in2p3.fr/event/20172/timetable/?view=standard_inline_minutes">Atelier D.E.</a></div>
+                    <div class="timeline-details"><a href="https://indico.in2p3.fr/event/20172/contributions/87138/attachments/60249/81820/PNTELIS_AofDE.pdf">PNG with interlopers in Euclid</a> <span class="conference-type">(20' Talk)</span></div>
+                </div>
+                
+                <!-- Additional conference items would continue here -->
+            </div>
+        </section>
+
         <section id="references">
             <h3>References</h3>
             <div class="references">
-                <div class="reference-item">
-                    <div class="reference-name">Dr. J.C. Hamilton</div>
-                    <div class="reference-position">APC, Paris</div>
-                    <div>5 Rue Thomas Mann, 75013, Paris, France</div>
-                    <div>Tel: 00 33 1 57 27 69 26</div>
-                    <div>Email: <a href="mailto:hamilton@apc.in2p3.fr">hamilton@apc.in2p3.fr</a></div>
-                </div>
-                
-                <div class="reference-item">
-                    <div class="reference-name">Prof. Jackson Levi Said</div>
-                    <div class="reference-position">University of Malta</div>
-                    <div>Mathematics and Physics, University of Malta, Msida</div>
-                    <div>Tel: +35 62 34 03 035</div>
-                    <div>Email: <a href="mailto:jackson.said@um.edu.mt">jackson.said@um.edu.mt</a></div>
-                </div>
-                
-                <div class="reference-item">
-                    <div class="reference-name">Prof. S. Camera</div>
-                    <div class="reference-position">INFN, Torino</div>
-                    <div>Via Pietro Giurra, 1, Torino, Italy</div>
-                    <div>Tel: 00 39 1 43 87 44 07</div>
-                    <div>Email: <a href="mailto:stefano.camera@unito.it">stefano.camera@unito.it</a></div>
-                </div>
-
-                <div class="reference-item">
-                    <div class="reference-name">Prof. S. Capozziello</div>
-                    <div class="reference-position">SSM Institute, Naples</div>
-                    <div>Largo S. Marcellino, 10, 80138 Napoli, Italy</div>
-                    <div>Tel: 00 39 329 909 4346</div>
-                    <div>Email: <a href="mailto:salvatore.capozziello@na.infn.it">salvatore.capozziello@na.infn.it</a></div>
-                </div>
-
-                <div class="reference-item">
-                    <div class="reference-name">Prof. S. Katsanevas</div>
-                    <div class="reference-position">EGO, Pisa</div>
-                    <div>Via Amaldi, 56021 Santo Stefano a Macerata, Italy</div>
-                    <div>Tel: 00 39 0 50 75 23 00</div>
-                    <div>Email: <a href="mailto:stavros.katsanevas@ego-gw.it">stavros.katsanevas@ego-gw.it</a></div>
-                </div>
-
-                <div class="reference-item">
-                    <div class="reference-name">Dr. A. Ealet</div>
-                    <div class="reference-position">IPNL, Lyon</div>
-                    <div>4 Rue Enrico Fermi, 69622 Lyon, France</div>
-                    <div>Tel: 00 33 6 42 25 44 00</div>
-                    <div>Email: <a href="mailto:a.ealet@ipnl.in2p3.fr">a.ealet@ipnl.in2p3.fr</a></div>
-                </div>
+                <p>References available upon request</p>
             </div>
         </section>
 
