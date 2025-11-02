@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pierros Ntelis - Curriculum Vitae</title>
+    <link rel="icon" type="image/x-icon" href="Pierros_Profile_Picture.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --text: #333;
+            --border: #bdc3c7;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: var(--text);
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 2px solid var(--secondary);
+            margin-bottom: 30px;
+        }
+        
+        .header-left h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        .header-left h2 {
+            font-size: 1.2rem;
+            color: var(--secondary);
+            font-weight: normal;
+        }
+        
+        .header-right img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--secondary);
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        section {
+            margin-bottom: 30px;
+        }
+        
+        h3 {
+            color: var(--primary);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .section-content {
+            padding-left: 20px;
+        }
+        
+        .timeline-item {
+            margin-bottom: 20px;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .timeline-item:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--secondary);
+        }
+        
+        .timeline-date {
+            font-weight: bold;
+            color: var(--secondary);
+        }
+        
+        .timeline-title {
+            font-weight: bold;
+            margin: 5px 0;
+        }
+        
+        .timeline-details {
+            margin-left: 10px;
+        }
+        
+        .publication-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        
+        .publication-links a {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: var(--secondary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .publication-links a:hover {
+            color: var(--accent);
+        }
+        
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .skill-tag {
+            background: var(--light);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: all 0.3s ease;
+        }
+        
+        .skill-tag:hover {
+            background: var(--secondary);
+            color: white;
+            text-decoration: none;
+        }
+        
+        .references {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .reference-item {
+            padding: 15px;
+            border: 1px solid var(--border);
+            border-radius: 5px;
+            background: var(--light);
+        }
+        
+        .reference-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .reference-position {
+            font-style: italic;
+            margin-bottom: 10px;
+            color: var(--secondary);
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            border-top: 1px solid var(--border);
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .header-right {
+                margin-top: 20px;
+            }
+            
+            .references {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .print-button {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+        
+        .print-button:hover {
+            background: var(--primary);
+        }
+        
+        .youtube-channel {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 10px 0;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+        
+        .youtube-channel i {
+            color: #ff0000;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-left">
+                <h1>Pierros Ntelis</h1>
+                <h2>Curriculum Vitae</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Marseille, France</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:ntelis.pierros@gmail.com">ntelis.pierros@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>0033 7 82 34 34 39</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-globe"></i>
+                        <a href="https://github.com/lontelis">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="header-right">
+                <!-- Updated with your actual profile picture -->
+                <img src="Pierros_Profile_Picture.jpg" alt="Pierros Ntelis">
+            </div>
+        </header>
+
+        <button class="print-button" onclick="window.print()">
+            <i class="fas fa-print"></i> Print CV
+        </button>
+
+        <section id="personal-info">
+            <h3>Personal Information</h3>
+            <div class="section-content">
+                <p>Born on September 18th, 1990 in Athens, Greece</p>
+                <p>Greek citizenship</p>
+            </div>
+        </section>
+
+        <section id="research-interests">
+            <h3>Research Interests</h3>
+            <div class="section-content">
+                <p>Mathematics, cosmology, theoretical physics, high energy astrophysics, large scale structures - theoretical and observational aspects</p>
+            </div>
+        </section>
+
+        <section id="employment">
+            <h3>Employment</h3>
+            <div class="section-content">
+                <div class="timeline-item">
+                    <div class="timeline-date">2022-Today</div>
+                    <div class="timeline-title">International Bilingual School of Provence</div>
+                    <div class="timeline-details">Mathematics and Physics Teacher for <a href="https://www.ibo.org/programmes/diploma-programme/">IB</a>, <a href="https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-upper-secondary/cambridge-igcse/">IGCSE</a></div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2018-Today</div>
+                    <div class="timeline-title">Independent Researcher</div>
+                    <div class="timeline-details">Self-employed research in mathematics, fundamental physics and cosmology</div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2018-2020</div>
+                    <div class="timeline-title">Center of Particle Physics of Marseille, Aix University</div>
+                    <div class="timeline-details">C.N.E.S. <a href="https://www.cppm.in2p3.fr/web/en/research/cosmology/">Postdoctoral Research Associate</a></div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2014-2017</div>
+                    <div class="timeline-title">Astroparticle and Cosmology Group, Université de Paris</div>
+                    <div class="timeline-details">PhD thesis: <a href="https://hal.archives-ouvertes.fr/tel-01674537/document">Probing Cosmology with the homogeneity scale of the universe through large scale structure surveys</a>, supervised by Dr. J.C. Hamilton</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education">
+            <h3>Education</h3>
+            <div class="section-content">
+                <div class="timeline-item">
+                    <div class="timeline-date">2014-2017</div>
+                    <div class="timeline-title">Ph.D., Université de Paris, Denis-Diderot</div>
+                    <div class="timeline-details"><a href="http://www.apc.univ-paris7.fr/APC_CS/">Fundamental Physics, Cosmology</a>, 1st upper class honours</div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2013-2014</div>
+                    <div class="timeline-title">M.Sc., University Paris 6, Paris 7, Paris 11</div>
+                    <div class="timeline-details"><a href="https://npac.lal.in2p3.fr/m2-presentation">Nuclei, Particles, Astroparticles & Cosmology</a>, Grade: 14.9/20</div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2008-2013</div>
+                    <div class="timeline-title">B.A., National Technical University of Athens</div>
+                    <div class="timeline-details"><a href="http://semfe.ntua.gr/el">School of Applied Mathematical & Physical Science</a>, Grade: 8.5/10</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="languages">
+            <h3>Languages</h3>
+            <div class="section-content">
+                <p>English (fluent), French (intermediate), Greek (native)</p>
+            </div>
+        </section>
+
+        <section id="publications">
+            <h3>Publications & Profiles</h3>
+            <div class="section-content">
+                <div class="publication-links">
+                    <a href="https://arxiv.org/search/?searchtype=author&query=Ntelis"><i class="fas fa-file-alt"></i> ArXiv</a>
+                    <a href="https://ui.adsabs.harvard.edu/search/q=ntelis&sort=date%20desc%2C%20bibcode%20desc&p_=0"><i class="fas fa-book"></i> ADS</a>
+                    <a href="https://inspirehep.net/literature?sort=mostrecent&size=25&page=1&q=ntelis&ui-citation-summary=true"><i class="fas fa-atom"></i> I-HEP</a>
+                    <a href="https://www.researchgate.net/scientific-contributions/2108147312_Pierros_Ntelis"><i class="fab fa-researchgate"></i> ResearchGate</a>
+                    <a href="https://www.linkedin.com/in/pierros-ntelis-27915460/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://github.com/lontelis"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://orcid.org/0000-0002-7849-2418"><i class="fab fa-orcid"></i> ORCID</a>
+                    <a href="https://scholar.google.com/citations?user=yiJSHekAAAAJ&hl=en"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="outreach">
+            <h3>Outreach</h3>
+            <div class="section-content">
+                <div class="youtube-channel">
+                    <i class="fab fa-youtube"></i>
+                    <div>
+                        <strong>Universions YouTube Channel:</strong> 
+                        <a href="https://www.youtube.com/@Universions">@Universions</a> - Cosmology and physics content for everyone
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h3>Skills</h3>
+            <div class="section-content">
+                <div class="skills-list">
+                    <a href="https://en.wikipedia.org/wiki/Mathematics" class="skill-tag">Mathematics</a>
+                    <a href="https://en.wikipedia.org/wiki/Communication" class="skill-tag">Efficient Communication</a>
+                    <a href="https://en.wikipedia.org/wiki/Data_analysis" class="skill-tag">Data Analysis</a>
+                    <a href="https://en.wikipedia.org/wiki/Mathematical_physics" class="skill-tag">Mathematical Physics</a>
+                    <a href="https://en.wikipedia.org/wiki/Artificial_intelligence" class="skill-tag">AI</a>
+                    <a href="https://www.python.org/" class="skill-tag">Python</a>
+                    <a href="https://en.wikipedia.org/wiki/C_(programming_language)" class="skill-tag">C</a>
+                    <a href="http://www.bestprogramminglanguagefor.me/why-learn-c-plus-plus" class="skill-tag">C++</a>
+                    <a href="https://en.wikipedia.org/wiki/Fortran" class="skill-tag">Fortran</a>
+                    <a href="https://en.wikipedia.org/wiki/Wolfram_Mathematica" class="skill-tag">Mathematica</a>
+                    <a href="https://en.wikipedia.org/wiki/LaTeX" class="skill-tag">LaTeX</a>
+                    <a href="https://en.wikipedia.org/wiki/Supercomputer" class="skill-tag">HPC</a>
+                    <a href="https://en.wikipedia.org/wiki/Unix" class="skill-tag">Unix</a>
+                    <a href="https://en.wikipedia.org/wiki/Linux" class="skill-tag">Linux</a>
+                    <a href="https://camb.info/" class="skill-tag">CAMB</a>
+                    <a href="https://class-code.net/" class="skill-tag">CLASS</a>
+                    <a href="https://github.com/lontelis/cosmopit" class="skill-tag">COSMOPIT</a>
+                    <a href="https://space.mit.edu/~molly/mangle/" class="skill-tag">Mangle</a>
+                    <a href="https://sci.esa.int/web/euclid" class="skill-tag">Euclid Software</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="references">
+            <h3>References</h3>
+            <div class="references">
+                <div class="reference-item">
+                    <div class="reference-name">Dr. J.C. Hamilton</div>
+                    <div class="reference-position">APC, Paris</div>
+                    <div>5 Rue Thomas Mann, 75013, Paris, France</div>
+                    <div>Tel: 00 33 1 57 27 69 26</div>
+                    <div>Email: <a href="mailto:hamilton@apc.in2p3.fr">hamilton@apc.in2p3.fr</a></div>
+                </div>
+                
+                <div class="reference-item">
+                    <div class="reference-name">Prof. Jackson Levi Said</div>
+                    <div class="reference-position">University of Malta</div>
+                    <div>Mathematics and Physics, University of Malta, Msida</div>
+                    <div>Tel: +35 62 34 03 035</div>
+                    <div>Email: <a href="mailto:jackson.said@um.edu.mt">jackson.said@um.edu.mt</a></div>
+                </div>
+                
+                <div class="reference-item">
+                    <div class="reference-name">Prof. S. Camera</div>
+                    <div class="reference-position">INFN, Torino</div>
+                    <div>Via Pietro Giurra, 1, Torino, Italy</div>
+                    <div>Tel: 00 39 1 43 87 44 07</div>
+                    <div>Email: <a href="mailto:stefano.camera@unito.it">stefano.camera@unito.it</a></div>
+                </div>
+
+                <div class="reference-item">
+                    <div class="reference-name">Prof. S. Capozziello</div>
+                    <div class="reference-position">SSM Institute, Naples</div>
+                    <div>Largo S. Marcellino, 10, 80138 Napoli, Italy</div>
+                    <div>Tel: 00 39 329 909 4346</div>
+                    <div>Email: <a href="mailto:salvatore.capozziello@na.infn.it">salvatore.capozziello@na.infn.it</a></div>
+                </div>
+
+                <div class="reference-item">
+                    <div class="reference-name">Prof. S. Katsanevas</div>
+                    <div class="reference-position">EGO, Pisa</div>
+                    <div>Via Amaldi, 56021 Santo Stefano a Macerata, Italy</div>
+                    <div>Tel: 00 39 0 50 75 23 00</div>
+                    <div>Email: <a href="mailto:stavros.katsanevas@ego-gw.it">stavros.katsanevas@ego-gw.it</a></div>
+                </div>
+
+                <div class="reference-item">
+                    <div class="reference-name">Dr. A. Ealet</div>
+                    <div class="reference-position">IPNL, Lyon</div>
+                    <div>4 Rue Enrico Fermi, 69622 Lyon, France</div>
+                    <div>Tel: 00 33 6 42 25 44 00</div>
+                    <div>Email: <a href="mailto:a.ealet@ipnl.in2p3.fr">a.ealet@ipnl.in2p3.fr</a></div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Last updated: June 2024</p>
+            <p>This CV is also available in <a href="ntelis_cv.pdf">PDF format</a></p>
+        </footer>
+    </div>
+
+    <script>
+        // Simple script to handle print functionality
+        document.querySelector('.print-button').addEventListener('click', function() {
+            window.print();
+        });
+    </script>
+</body>
+</html>
